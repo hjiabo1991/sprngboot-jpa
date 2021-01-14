@@ -1,0 +1,31 @@
+.overall-div {
+}
+
+.login-title {
+    background-color: #10b6f8;
+    padding-left: 30px;
+    padding-top: 10px;
+    height: 30px;
+}
+.b-nav {
+    margin-left: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#hello-user {
+    margin-left: 73%;
+    font-family: "楷体";
+}
+.hello-user-name {
+    font-size: 13px;
+    padding-right: 5px;;
+}
+.before-login-time {
+    margin-left: 85%;
+}
+p {
+    font-size: 10px;
+    color: #6666ad;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../../image/title.ico" type="img/x-ico"/>
+    <title>INDEX</title>
+    <!-- 引入bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap/bootstrap.min.css">
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" type="text/css" href="../../css/index_style.css"/>
+    <!-- 引入jquery -->
+    <script type="text/javascript" src="../../js/other/jquery.min.js"></script>
+    <!--引入echarts -->
+    <script type="text/javascript" src="../../js/other/echarts.min.js"></script>
+
+    <!-- bootstrap js-->
+    <script src="../../js/bootstrap/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="overall-div">
+        <div class="container navigation">
+            <div class="row">
+                <div class="col nav">
+
+                </div>
+            </div>
+        </div>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="role_manger.html">角色管理</a></li>
+            <li role="presentation"><a href="user_manger.html">用户管理</a></li>
+            <li role="presentation"><a href="log_manger.html">日志审计</a></li>
+        </ul>
+        <div class="before-login-time">
+            <p>上次登录时间:<span>yyyy/mm/dd HH:MM:ss</span></p>
+            <p>登录系统次数: 50次</p>
+            <p>在职累计天数: 40天</p>
+        </div>
+        <hr>
+        <div id="main" style="width: 600px;height:400px;">
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        const myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        const option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
+</body>
+</html>

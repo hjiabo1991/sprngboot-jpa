@@ -1,0 +1,27 @@
+server:
+  servlet:
+    context-path: /jpa
+
+## 配置数据库连接
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 'jdbc:mysql://localhost:3306/jpa?characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true'
+    username: root
+    password: xiaohouzi
+  ## 配置jpa
+  jpa:
+    ## true 逆向工程开启
+    ## true 逆向工程：数据库表存在，根据表生成对应的实体类
+    ## false 正向工程，存在实体类，根据实体类创建对应的表
+    ## generate-ddl: false
+#    hibernate:
+#      ## create 创建表
+#      ## update 如果存在数据库表，则使用数据库表，如果没有表就创建，如果数据库表和实体类不一致，则会更新数据库表
+#      ddl-auto: update
+    ## 展示sql
+    show-sql: true
+    ## 设置数据库引擎
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+
